@@ -1,82 +1,306 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width ,initial-scale-1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
-    <title>SnapShare</title>
-    <head>
-      <body>
-        <header>
-          <div class="header_top">
-            <div class="header_top--logo">
-              <img src="img/logo.jpg" alt="" srcset="">
-            </div>
-            <div class="header_top--icons">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
-                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
-                <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
-                <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-text-fill" viewBox="0 0 16 16">
-                <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-              </svg>
-            </div>
-          </div>
-        </header>
-        <section>
-          <div class="stories">
-            <div class="story" style="background-image: url('/img/1.jpg');"></div>
-            <div class="story" style="background-image: url('/img/2.jpg');"></div>
-            <div class="story" style="background-image: url('/img/3.jpg');"></div>
-            <div class="story" style="background-image: url('/img/4.jpg');"></div>
-            <div class="story"  style="background-image: url('/img/5.jpg');"></div>
-            <div class="story" style="background-image: url('/img/2.jpg');"></div>
-            <div class="story" style="background-image: url('/img/3.jpg');"></div>
-            <div class="story" style="background-image: url('/img/4.jpg');"></div>
-            <div class="story"  style="background-image: url('/img/5.jpg');"></div>
-           </div>
-        </section>
-        <section class="posts">
-          <div class="post">
-            <div class="post-header"></div>
-            <div class="post_user">
-              <div class="post_user--un">Sam Verral</div>
-              <div class="post-user--pp">
-                <img src="./img/2.jpg"/>
-              </div>
-              </div>
-            <div class="options">
-             </div>
-          </div>
-          <div class="post-content">
-            <img src="./img/3.jpg" width="615px" height="853px">
-          </div>
-          <div class="post_icons">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
-              <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
-            </svg>
-          </div>
-          <div class="post_text">
-            <p><span class="username">samervall</span>Hey guys , leave a like!
-            </p>
-          </div>
-        </section>
 
-        <script src="https://use.fontawesome.com/d30b2d8631.js"></script>
-      </body>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/computer.css" media="screen and (min-width: 769px)">
+  <link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 768px)">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <title>Snapshare- Log In or Sign Up</title>
+</head>
 
-  </head>
+<body>
+  <div class="computer">
+    <header>
+      <div class="headersubdiv">
+        <img src="img/logo.jpg" class="fblogo">
+        <div class="loginform">
+          <table>
+            <tr>
+              <td class="logintext">Email or Phone</td>
+              <td class="logintext"><span class="loginrowgap">Password</span></td>
+            </tr>
+            <td><input class="logintext loginfield" type="text"></td>
+            <td><input class="logintext loginrowgap loginfield" type="password"></td>
+            <td><a href="feed.html"><input class="loginrowgap" id="loginbutton" type="submit" value="Log In"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="#" class="logintext loginrowgap" id="forgotpw">Forgotten account?</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </header>
+
+    <div class="maindiv">
+      <div class="mainsubdiv">
+        <div class="welcome">
+          <div class="welcometext">Snapshare helps you connect and share with the people in your life.</div>
+          <div class="welcomepic">
+            <img src="img/connecting.png" alt="welcome">
+          </div>
+        </div>
+        <div class="signupdiv">
+          <div class="createaccount">
+            <div class="createh1"><span>Create an account</span></div>
+            <div class="createp">It's free and always will be.</div>
+          </div>
+          <div class="signupform">
+            <div class="inputname">
+              <input type="text" name="firstname" placeholder="First name" class="namebox namebox1 signuptextbox"
+                required>
+              <input type="text" name="surname" placeholder="Surname" class="namebox namebox2 signuptextbox" required>
+            </div>
+            <input class="mobilepw signuptextbox" type="text" name="mobile/email"
+              placeholder="Mobile number or email address" required><br>
+            <input class="mobilepw signuptextbox" type="password" placeholder="New password" required>
+            <br>
+            <p class="createp" id="birthday">Birthday</p>
+            <div class="dobdiv">
+              <select name="dobdate" class="dob day">
+                <option value="day">Day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+              <select name="dobmonth" class="dob month">
+                <option value="month">Month</option>
+                <option value="jan">Jan</option>
+                <option value="feb">Feb</option>
+                <option value="mar">Marc</option>
+                <option value="apr" selected>Apr</option>
+                <option value="may">May</option>
+                <option value="jun">Jun</option>
+                <option value="jul">Jul</option>
+                <option value="aug">Aug</option>
+                <option value="sep">Sept</option>
+                <option value="oct">Oct</option>
+                <option value="nov">Nov</option>
+                <option value="dec">Dec</option>
+              </select>
+              <select name="dobyear" class="dob year">
+                <option value="year">Year</option>
+                </option>
+                <option value="0">Year</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994" selected="1">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+                <option value="1934">1934</option>
+                <option value="1933">1933</option>
+                <option value="1932">1932</option>
+                <option value="1931">1931</option>
+                <option value="1930">1930</option>
+                <option value="1929">1929</option>
+                <option value="1928">1928</option>
+                <option value="1927">1927</option>
+                <option value="1926">1926</option>
+                <option value="1925">1925</option>
+                <option value="1924">1924</option>
+                <option value="1923">1923</option>
+                <option value="1922">1922</option>
+                <option value="1921">1921</option>
+                <option value="1920">1920</option>
+                <option value="1919">1919</option>
+                <option value="1918">1918</option>
+                <option value="1917">1917</option>
+                <option value="1916">1916</option>
+                <option value="1915">1915</option>
+                <option value="1914">1914</option>
+                <option value="1913">1913</option>
+                <option value="1912">1912</option>
+                <option value="1911">1911</option>
+                <option value="1910">1910</option>
+                <option value="1909">1909</option>
+                <option value="1908">1908</option>
+                <option value="1907">1907</option>
+                <option value="1906">1906</option>
+                <option value="1905">1905</option>
+              </select>
+              <div id="whydb">
+                <a href="#">Why do I need to provide my date of birth?</a>
+                <div id="whydbtooltip">
+                  <strong>Providing your date of birth</strong> helps make sure that you get the right Facebook
+                  experience for your age. If you want to change who sees this, go to the About section of your Profile.
+                  For more details, please visit our <a href="#">Data Policy</a>.
+                  <hr id="hrtooltip">
+                  <button id="whydbtooltipbutton">OK</button>
+                </div>
+              </div>
+            </div>
+            <div class="gender">
+              <span id="femalediv"><input type="radio" name="gender" value="female" id="female"><label
+                  class="gendertext" for="female">Female</label></span>
+              <span id="malediv"><input type="radio" name="gender" value="male" id="male"><label class="gendertext"
+                  for="male">Male</label></span>
+            </div>
+            <div>
+              <p class="terms">
+                By clicking Sign Up, you agree to our <a href="#" class="linksinterms">Terms</a>, <a href="#"
+                  class="linksinterms">Data Policy</a> and <a href="#" class="linksinterms">Cookie Policy</a>. You may
+                receive SMS notifications from us and can opt out at any time.
+              </p>
+            </div>
+            <div class="clearfix">
+              <button type="button" id="signupbutton">Sign Up</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="footersubdiv">
+
+        <hr id="hrfinal">
+        <div id="extralinksdiv">
+          <a href="#" class="extralinks">Sign Up</a>
+          <a href="#" class="extralinks">Log In</a>
+          <a href="#" class="extralinks">Messenger</a>
+          <a href="#" class="extralinks">Privacy</a>
+          <a href="#" class="extralinks">Cookies</a>
+          <a href="#" class="extralinks">AdChoices</a>
+          <a href="#" class="extralinks">Terms</a>
+          <a href="#" class="extralinks">Account security</a>
+          <a href="#" class="extralinks">Login help</a>
+          <a href="#" class="extralinks">Help</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+  <!--Code for Mobile Screen-->
+
+  <div class="mobile">
+    <div class="mobheader">
+      <img src="img/logo.jpg" class="mobfblogo">
+    </div>
+    <div id="mobapplink" class="clearfix">
+      <div class="mobmaindiv">
+        <div id="mobtextdiv">
+          <input type="text" class="mobtextbox mobtextbox1" placeholder="Mobile number or email address">
+          <input type="password" class="mobtextbox mobtextbox2" placeholder="Password">
+        </div>
+        <div class="mobloginbuttondiv">
+          <a href="feed.html">
+            <input type="submit" class="mobloginbutton" value="Log In"></a>
+        </div>
+        <div id="ordiv">
+          <span id="or">or</span>
+        </div>
+        <div id="mobcreatediv">
+          <button id="mobcreate">Create New Account</button>
+        </div>
+        <div class="mobforgotpw">
+          <a href="#">Forgotten password?</a>
+          <span>·</span>
+          <a href="#">Help Center</a>
+        </div>
+      </div>
+      <div class="mobfooter">
+
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
