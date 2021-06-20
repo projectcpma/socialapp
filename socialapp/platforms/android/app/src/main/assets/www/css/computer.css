@@ -1,0 +1,366 @@
+.mobile {
+  display: none;
+}
+
+/* Styles for whole web page */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, Sans-serif;
+}
+@font-face {
+  font-family: "Freight Sans Medium";
+  src: url("fonts/Freight Sans Medium.otf");
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 769px) {
+  input:focus {
+    outline: none;
+  }
+  select:focus {
+    outline: none;
+  }
+}
+
+/* Styles for header */
+header {
+  height: 83px;
+  width: 100%;
+  background-image: linear-gradient(
+    #1e1e1e 0%,
+    #1e1e1e 10%,
+    #1e1e1e 20%,
+    #1e1e1e 30%,
+    #1e1e1e 40%,
+    #1e1e1e 50%
+  );
+  min-width: 980px;
+}
+.headersubdiv {
+  margin: auto;
+  height: 82px;
+  width: 980px;
+}
+.fblogo {
+  margin: 0;
+  padding: 0;
+  margin: 2px 0 0 0;
+  height: 80px;
+  width: 80px;
+  float: left;
+  border-radius: 50%;
+}
+.loginform {
+  margin: 0;
+  padding: 0;
+  margin: 8px 0 0 0;
+  border-collapse: collapse;
+  float: right;
+}
+.logintext {
+  width: 148px;
+  height: 21px;
+  color: white;
+  font-size: 12px;
+  font-family: inherit;
+  line-height: 16.06px;
+  vertical-align: middle;
+}
+.loginfield {
+  color: black;
+}
+.loginrowgap {
+  /*Horizontal gap between login fields*/
+  margin-left: 14px;
+}
+#forgotpw {
+  color: #9cb4d8;
+  vertical-align: top;
+}
+#loginbutton {
+  color: white;
+  background-color: #7a65e8;
+  border: 1px solid #29487d;
+  padding: 3px 6px 3px 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#loginbutton:hover {
+  background-color: #365899;
+}
+
+/* Styles for mid-section */
+.maindiv {
+  background-image: linear-gradient rgba(66, 26, 132, 1);
+  background: -webkit-linear-gradient(
+    top left,
+    rgba(66, 26, 132, 1),
+    rgba(141, 78, 130, 1)
+  );
+  background: -moz-linear-gradient(
+    top left,
+    rgba(66, 26, 132, 1),
+    rgba(141, 78, 130, 1)
+  );
+  background: linear-gradient(
+    to bottom right,
+    rgba(66, 26, 132, 1),
+    rgba(141, 78, 130, 1)
+  );
+  width: 100%;
+  min-width: 980px;
+}
+.mainsubdiv {
+  margin: auto;
+  height: 572px;
+  width: 980px;
+}
+.welcome {
+  width: 565px;
+  float: left;
+}
+.welcometext {
+  width: 450px;
+  margin-top: 40px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  color: rgb(212, 209, 209);
+  word-spacing: -1px;
+}
+.welcomepic {
+  width: inherit;
+}
+
+.signupdiv {
+  margin-left: 14px;
+  float: left;
+}
+.createaccount {
+  padding: 20px 0 20px 0;
+  width: 400px;
+  height: 78px;
+  margin-bottom: 35px;
+}
+.createh1 {
+  font-family: inherit;
+  font-size: 35px;
+  font-weight: 600;
+  color: rgb(212, 209, 209);
+  line-height: 48.24px;
+  margin-bottom: 5px;
+}
+.createp {
+  font-family: inherit;
+  color: rgb(212, 209, 209);
+  font-size: 19px;
+  line-height: 24.12px;
+}
+
+.signupform {
+  width: 400px;
+}
+.signuptextbox {
+  border-radius: 5px;
+  height: 21px;
+  padding: 19px 10px 19px 10px;
+  font-size: 18px;
+  margin-bottom: 8px;
+  border: 1px solid #ccd2e4;
+}
+.signuptextbox::-webkit-input-placeholder {
+  color: #999999;
+}
+.namebox {
+  width: 48.75%;
+  display: inline-block;
+}
+.namebox1 {
+  float: left;
+}
+.namebox2 {
+  float: right;
+}
+.mobilepw {
+  width: 100%;
+}
+
+#birthday {
+  margin: 0;
+  margin: 10px 0 5px 0;
+}
+.dobdiv {
+  width: 100%;
+  height: 40px;
+}
+.dob {
+  padding: 5px 5px 5px 5px;
+  border: 1px solid #bdc7d8;
+}
+.day {
+  width: 58px;
+  height: 30px;
+  margin-right: -5.8px;
+}
+.month {
+  width: 71px;
+  height: 30px;
+  margin-right: -5.8px;
+}
+.year {
+  width: 63px;
+  height: 30px;
+}
+#whydb {
+  margin-left: 5px;
+  font-family: inherit;
+  font-size: 11px;
+  max-width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+#whydbtooltip {
+  height: 141px;
+  width: 312px;
+  background-color: #fff;
+  border: 1px solid #acafb5;
+  visibility: hidden;
+  position: absolute;
+  top: -7px;
+  left: -217%;
+  font-size: 12px;
+  color: #1d2129;
+  padding: 12px 12px 8px 12px;
+  box-shadow: 0 0 6px 1px rgb(143, 143, 143);
+  border-radius: 3px;
+  z-index: 1;
+}
+#hrtooltip {
+  width: 288px;
+  border: 0.5px solid #dddfe2;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+#whydbtooltipbutton {
+  border: 1px solid #7a65e8;
+  border-radius: 2px;
+  background-color: #7a65e8;
+  color: rgb(212, 209, 209);
+  font-size: 12px;
+  font-weight: bold;
+  height: 23px;
+  width: 30px;
+  float: right;
+}
+#whydbtooltipbutton:hover {
+  background-color: #7a65e8;
+  border-color: #7a65e8;
+}
+#whydbtooltip::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  border: 6px solid;
+  border-color: transparent transparent transparent white;
+}
+#whydb:hover #whydbtooltip {
+  visibility: visible;
+}
+
+.gender {
+  margin: 6px 0 0 0;
+}
+#femalediv {
+  padding: 5px 0 5px 4px;
+}
+#malediv {
+  padding: 5px 0 5px 12px;
+}
+.gendertext {
+  font-size: 18px;
+  line-height: 18px;
+  color: rgb(212, 209, 209);
+  padding: 0 0 0 2px;
+}
+
+.terms {
+  font-size: 11px;
+  color: rgb(212, 209, 209);
+  margin: 11px 0;
+  width: 316px;
+  line-height: 14.74px;
+}
+.linksinterms {
+  color: #7a65e8;
+}
+
+#signupbutton {
+  float: left;
+  background-image: linear-gradient(rgb(103, 174, 85), rgb(87, 136, 67));
+  font-size: 19px;
+  font-family: "Freight Sans Medium", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  margin: 10px 0 10px 0;
+  padding: 7px 20px 7px 20px;
+  height: 39px;
+  width: 194px;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: #3b6e22 #3b6e22 #2c5115;
+  box-shadow: inset 0 1px 1px #a4e388;
+  cursor: pointer;
+}
+#signupbutton:hover {
+  background-image: linear-gradient(rgb(115, 185, 98), rgb(87, 136, 67));
+}
+
+/*footer */
+footer {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  min-width: 980px;
+  padding-bottom: 30px;
+}
+#footersubdiv {
+  height: auto;
+  width: 980px;
+  margin: auto;
+}
+
+#hrfinal {
+  width: 980px;
+  border: 0.5px solid #dddfe2;
+  margin: auto;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+#extralinksdiv {
+  height: 57px;
+  width: inherit;
+}
+.extralinks {
+  font-size: 12px;
+  display: inline-block;
+  padding-right: 14px;
+}

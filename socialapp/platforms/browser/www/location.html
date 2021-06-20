@@ -6,11 +6,67 @@
     <meta name="viewport"
         content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Cordova Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="css/bootstrap-grid.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.rtl.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.rtl.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.rtl.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.rtl.min.css" rel="stylesheet">
+    <link href="css/bootstrap-utilities.css" rel="stylesheet">
+    <link href="css/bootstrap-utilities.min.css" rel="stylesheet">
+    <link href="css/bootstrap-utilities.rtl.css" rel="stylesheet">
+    <link href="css/bootstrap-utilities.rtl.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.rtl.css" rel="stylesheet">
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>SnapShare.Location</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size: 45px;">
+                <img src="img/logo.jpg" alt="" width="60" height="60"
+                    style="border-radius:50%; border: 3px solid white;" class="d-inline-block align-text-top">
+                SnapShare
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="feed.html"><button class="btn"><i
+                                    class="fa fa-home"></i>&nbsp;&nbsp;HOME</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="capture.html">
+                            <button class="btn"><i class="fa fa-camera"></i>&nbsp;&nbsp;CAPTURE</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="location.html"><button class="btn"><i
+                                    class="fa fa-map-marker"></i>&nbsp;&nbsp;LOCATION</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <button id="getPosition">CURRENT POSITION</button>
+    <script src="https://use.fontawesome.com/d30b2d8631.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.esm.js"></script>
+    <script src="js/bootstrap.esm.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/location.js"></script>
 </body>

@@ -1,110 +1,446 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+
+  body{
+    background-color: rgb(51, 51, 51);
+  }
+  .btn {
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: royalblue;
+}
+.circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.circle svg {
+  fill: none;
+  stroke: #8a3ab9;
+  stroke-linecap: round;
+  stroke-width: 3;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: stroke-draw 6s ease-out infinite alternate;
+}
+.circle img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  border-radius: 50%;
+}
+@keyframes stroke-draw {
+  from {
+    stroke: #8a3ab9;
+    stroke-dasharray: 1;
+  }
+  to {
+    stroke: #cd486b;
+    transform: rotate(180deg);
+    stroke-dasharray: 8;
+  }
 }
 
-body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%);
-    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
-    font-size:12px;
-    height:100vh;
-    margin:0px;
-    padding:0px;
-    /* Padding to avoid the "unsafe" areas behind notches in the screen */
-    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
-    text-transform:uppercase;
-    width:100%;
-}
-
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
-}
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
-
-.event.received {
-    background-color:#4B946A;
-    display:none;
-}
-
-#deviceready.ready .event.listening { display: none; }
-#deviceready.ready .event.received { display: block; }
-
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
-
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+.inline { 
+display: inline-block; 
+margin-right:18px;
+margin-left:18px;
+margin-top: 10px;
 }
 
 
-@media screen and (prefers-color-scheme: dark) {
-    body {
-        background-image:linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
-    }
+.feed{
+  display: grid; 
+  margin: 1rem auto;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: scroll;
+   
+}
+
+.feed::-webkit-scrollbar{
+    width: 12px;
+  }
+.feed::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px ivory; 
+  border-radius: 5px;
+}
+.feed::-webkit-scrollbar-thumb {
+  background: rgb(207, 207, 207); 
+  border-radius: 5px;
+}
+
+.dashboard-post.inactive{
+  display: block;
+}
+
+.post-card{
+  background: rgb(0, 0, 0);  
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 20px;
+  margin-left: 20px;
+  width: 900px;
+  height: 700px;
+  color: white;
+  box-shadow:10px 10px 50px rgb(78, 78, 78);
+  
+}
+
+.author{
+  padding: 5px;
+  display: flex;
+  font-size: 20px;
+}
+
+.avi {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.iframe{
+  height: 400px; 
+  width: 100%; 
+  border: none;
+/*   border: 2px solid #008D8D; */
+  border-radius: 10px;
+  
+}
+
+.content h4{
+  margin: 10px;
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.footer{
+  margin: 10px;
+}
+
+.reactions{
+  width: 50px;
+  height:50px;
+  display: inline;
+  pointer: cursor;
+  color: white;
+}
+
+#interact{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-top: 50px;
+}
+
+#interact i {
+  font-size: 18px;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+#interact i:hover{
+  color:#008D8D;
+}
+
+.fa-thumbs-down{
+  color: white;
+  padding:10px 21px;
+ 
+}
+
+.fa-thumbs-up{
+  color: white;
+  padding:10px 21px;
+  
+}
+
+.fa-heart{
+ color: white;
+  padding:10px 21px;
+ 
+  
+}
+
+.fa-share{
+ color: white;
+ padding:10px 21px;
+ 
+}
+
+.fa-comment{
+ color: white;
+ padding:10px 21px;
+ 
+}
+
+/*Explorer*/
+
+.explorer-post{
+  display: none;
+}
+
+.post-explorer{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content:space-evenly;
+}
+
+.post-card.explorer{
+  background: rgb(192, 192, 192);  
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 15px;
+  margin-left: 20px;
+  width: 350px;
+  height: 450px;
+  max-height: 620px;
+  color: white;
+  box-shadow:10px 10px 50px grey;
+  
+}
+
+.author{
+  padding: 5px;
+  display: flex;
+  font-size: 20px;
+}
+
+.avi {
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.pics{
+  height: 100%; 
+  width: 100%; 
+  border: 2px solid #008D8D;
+  border: none;
+  border-radius: 10px;
+  
+}
+
+.content h4{
+  margin: 10px;
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.footer{
+  margin: 10px;
+}
+
+.reactions{
+  width: 50px;
+  height:50px;
+  display: inline;
+  pointer: cursor;
+  color: white;
+}
+
+#interact{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+#interact i {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+#interact i:hover{
+  color:#008D8D;
+}
+
+.fa-thumbs-down{
+  color: white;
+  padding:10px 21px;
+ 
+}
+
+.fa-thumbs-up{
+  color: white;
+  padding:10px 21px;
+  
+}
+
+.fa-heart{
+ color: white;
+  padding:10px 21px;
+ 
+  
+}
+
+.fa-share{
+ color: white;
+ padding:10px 21px;
+ 
+}
+
+.chat-container{
+position: absolute;
+  top: 49%;
+  left: 80%;
+  width: 335px;
+  height: 450px;
+  z-index: 10;
+  background: #fffaf0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  transform:scale(0);
+} 
+
+.chat-container.active{
+  transform:scale(1);
+}
+
+.chat-header{
+  background:#008D8D;
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.chat-header h3{
+color: white;
+}
+
+.fa-circle{
+  margin: 5px;
+  font-size: 15px;
+  color: #32CD32;
+}
+
+.message-list{
+  height: 80%;
+  overflow-y: scroll;
+  padding: 8px;
+}
+
+.message-list::-webkit-scrollbar{
+    width: 6px;
+  }
+.message-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px ivory; 
+  border-radius: 5px;
+}
+.message-list::-webkit-scrollbar-thumb {
+  background: #008D8D; 
+  border-radius: 5px;
+}
+
+.text{
+  position: absolute;
+  background: #fffaf0;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+/*   border-top: 1px solid #008D8D; */
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.05);
+
+}
+
+.chat-container input{
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  border:none;
+  border-bottom: 2px solid #008D8D;
+  border-right: 2px solid #008D8D;
+  font-weight: bold;
+  background-color: #fffaf0; 
+  background: rgba(255, 255, 255, 0.05);
+  color:white;
+
+  
+}
+
+.message-row{
+ display: grid;
+ flex-direction: column;
+ margin-bottom: 20px; 
+ margin-top: 20px;
+  
+}
+
+.bot-message{
+ justify-content: start;
+ justify-items: start;
+}
+
+
+.bot-message .message-text{
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 8px;
+  background: rgb(185, 185, 185);
+}
+
+.message-text {
+padding: 9px 14px;
+ font-size: 16px; 
+ margin-bottom: 5px;
+   
+}
+
+.message-time{
+  color: grey;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.mine{
+ justify-content: end;
+ justify-items: end;
+}
+
+.mine .message-text{
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 8px;
+  background: #008D8D;
+}
+
+#message-time{
+  color: grey;
+  font-size: 14px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 600){
+  body{
+    background: ivory;
+  }
+  .post-card{
+    width:100%;  
+  }
+  header{
+    width: 100vw;
+    height: 100vh;
+  }
 }
